@@ -13,12 +13,8 @@ function sleep(s)
 
 
 parentPort.on("message", data => {
-	//console.log(data);
 	if (data.do == "ON") {
-
-		parentPort.postMessage({res:"start"});
-		//main();
-		
+		parentPort.postMessage({res:"start"});		
 	}
 	if (data.do == "VAL") {
 		parentPort.postMessage({res:"val",val: valeur});
